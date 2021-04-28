@@ -16,10 +16,10 @@ func main() {
 
 	file, err := os.OpenFile("output.csv", os.O_CREATE|os.O_WRONLY, os.ModePerm)
 	spew.Dump(err)
+	defer file.Close()
 
 	writer := csv.NewWriter(file)
 	writer.Write([]string{"Iteration", "Value"})
-	defer file.Close()
 
 	lastValue := 0.0
 	for i := 0; i < 1000; i++ {
