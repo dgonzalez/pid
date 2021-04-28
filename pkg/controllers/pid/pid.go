@@ -10,8 +10,8 @@ type PID struct {
 	target        float64
 }
 
-func New(p float64, i float64, d float64, intervalMsecs int64) PID {
-	return PID{kp: p, ki: i, kd: d, intervalMsecs: intervalMsecs}
+func New(p float64, i float64, d float64, intervalMsecs int64) *PID {
+	return &PID{kp: p, ki: i, kd: d, intervalMsecs: intervalMsecs}
 }
 
 func (p *PID) SetTarget(target float64) {

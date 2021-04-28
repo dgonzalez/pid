@@ -6,11 +6,12 @@ import (
 	"os"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/dgonzalez/pid/pkg"
+	controllers "github.com/dgonzalez/pid/pkg/controllers"
+	pid "github.com/dgonzalez/pid/pkg/controllers/pid"
 )
 
 func main() {
-	controller := pkg.New(0.01, 0.01, 0.5, 1)
+	var controller controllers.Controller = pid.New(0.01, 0.01, 0.5, 1)
 	controller.SetTarget(500)
 
 	file, err := os.OpenFile("output.csv", os.O_CREATE|os.O_WRONLY, os.ModePerm)
