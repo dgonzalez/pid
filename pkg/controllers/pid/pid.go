@@ -1,4 +1,4 @@
-package pkg
+package pid
 
 type PID struct {
 	kp            float64
