@@ -1,3 +1,5 @@
+[![Go](https://github.com/dgonzalez/pid/actions/workflows/go.yml/badge.svg)](https://github.com/dgonzalez/pid/actions/workflows/go.yml)
+
 pid is a PID controller (as you might have guessed by the name). If you need more information on what a PID contorller is, [Wikipedia is your friend](https://en.wikipedia.org/wiki/PID_controller).
 
 # Quickstart
